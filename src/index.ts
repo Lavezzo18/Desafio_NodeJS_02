@@ -38,7 +38,7 @@ console.log('R03 – CALCULAR MÉDIA IMC DE TODOS UBUNTOS:')
     console.log ('- Imc de Gabriel eh:' , peso3 / (altura3*altura3) ); // resultado 
 
 console.log('R04 – CONTAR QUANTOS UBUNTUS SÃO DEVS:'); // resultado 
-    console.log('São Dev:')
+    console.log('São Dev:' , [nome1 , nome2])
 
 console.log('R05 – EXIBIR SOMENTE UBUNTUS COM SOBRENOME SILVA:');
     console.log('-Nomes com sobrenome Silva:' ,[ nome1 ,nome3 ]); // resultado 
