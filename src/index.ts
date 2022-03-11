@@ -1,43 +1,45 @@
-/**
- * Required External Modules
- */
+var express = require('express');
+var app = express();
 
-import * as dotenv from "dotenv";
-import express from "express";
-import cors from "cors";
-import helmet from "helmet";
+app.listen(1000, () => {
+    console.log('Executando na porta 1000!');
 
-dotenv.config();
+console.log('Desafio_02');
+   
+console.log ('Some a idade de todos os Ubuntus');
 
-/**
- * App Variables
- */
+const nome1:string = 'Rafael Silva';
+const idade1:number = 19;
+const peso1:number = 68;
+const altura1:number = 1.70
+const ehDev1:boolean = true;
 
-if (!process.env.PORT) {
-	process.exit(1);
-}
+const nome2:string = 'Carlos Rodrigues';
+const idade2:number = 22;
+const peso2:number = 70;
+const altura2:number = 1.74
+const ehDev2:boolean = true;
 
-const PORT: number = parseInt(process.env.PORT as string, 10);
+const nome3:string = 'Gabriel Silva';
+const idade3:number = 24;
+const peso3:number = 77;
+const altura3:number = 1.79
+const ehDev3:boolean = false;
 
-const app = express();
+console.log('R01 – SOMAR A IDADE DE TODOS OS UBUNTUS:');
+    console.log('- A soma das idades eh:' , idade1 + idade2 + idade3); // resultado 
 
-/**
- *  App Configuration
- */
+console.log('R02 – AGRUPAR O NOME DE TODOS OS UBUNTUS:'),
+    console.log ('- Agrupe todos os nomes:' , [nome1, nome2, nome3]); // resultado 
 
-app.use(helmet());
-app.use(cors());
-app.use(express.json());
+console.log('R03 – CALCULAR MÉDIA IMC DE TODOS UBUNTOS:')
+    console.log ('- Imc de Rafael eh:' , peso1 / (altura1*altura1) ); // resultado 
+    console.log ('- Imc de Carlos eh:' , peso2 / (altura2*altura2) ); // resultado 
+    console.log ('- Imc de Gabriel eh:' , peso3 / (altura3*altura3) ); // resultado 
 
-/**
- * Server Activation
- */
+console.log('R04 – CONTAR QUANTOS UBUNTUS SÃO DEVS:'); // resultado 
+    console.log('São Dev:')
 
-app.listen(PORT, () => {
-	console.log(`Listening on port ${PORT}`);
-
-
-	// CÓDIGO PARA ATENDER OS REQUERIMENTOS
-	// R01, R02, R03, R04, R05
-	
+console.log('R05 – EXIBIR SOMENTE UBUNTUS COM SOBRENOME SILVA:');
+    console.log('-Nomes com sobrenome Silva:' ,[ nome1 ,nome3 ]); // resultado 
 });
